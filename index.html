@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <nav class="menu">
+            <!--LOGO-->
+            <label class="logo"><img src="/icons/logo.png" width="45" height="45" alt="Logo">
+
+                <!--Check do Hamburguer-->
+            </label>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn"><i class="material-icons">menu</i></label>
+
+            <!--Menu-->
+            <ul>
+                <li class="item-menu"><a href="#">Login</a></li>
+                <li class="item-menu"><a href="#">About Us</a></li>
+                <li class="item-menu"><a href="#">Register</a></li>
+                <li class="item-menu"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Corpo-->
+    <section>
+        <div class="main-container">
+            <form class="login-form">
+
+                <div class="flex-input"><input class="input" type="text" placeholder="&#xf007 &nbsp;&nbsp; User Name" required></div>
+
+                <div class="flex-input"><input class="input" type="password" placeholder="&#xf023 &nbsp;&nbsp; Password" required></div>
+
+                <input class="button" type="button" value="Get Started">
+
+            </form>
+        </div>
+    </section>
+</body>
+</html>
