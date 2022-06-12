@@ -58,6 +58,10 @@ body {
     color: rgb(255, 255, 255);
 }
 
+.logo{
+    padding: 5px;
+}
+
 .checkbtn {
     order: 6;
     display: none;
@@ -130,11 +134,11 @@ form input[type=button]:hover {
 /* RODAPÉ */
 footer {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
     left: 0;
     right: 0;
     /* background: #f83d46; */
-    height: auto;
+    height: 30px;
     width: 100vw;
     color: white;
 }
@@ -160,14 +164,29 @@ footer {
     padding: 10px;
 }
 
+/* Bem Vindo */
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    background-color: #FB646B;
+    width: 60%;
+    color: black;
+    padding: 20px;
+    border-radius: 30px;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 860px) {
 
     #check:checked~.menu {
         display: block;
-        transition-property: visibility, opacity;
-        transition-duration: 0s, 1s;
     }
 
     .navbar,
@@ -214,7 +233,7 @@ footer {
     }
 
     form input {
-        min-width: 300px;
+        min-width: 280px;
         transition: 0.1s;
     }
 
@@ -234,7 +253,7 @@ footer {
     }
 
     form input {
-        min-width: 200px;
+        min-width: 250px;
         transition: 0.1s;
     }
     .footer-item{
@@ -251,7 +270,7 @@ footer {
     }
 
     form input {
-        min-width: 200px;
+        min-width: 180px;
         transition: 0.1s;
     }
     .footer-item{
