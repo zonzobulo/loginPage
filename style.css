@@ -4,37 +4,56 @@
     box-sizing: border-box;
 }
 
+html {
+    background: url(/img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
 body {
-    background: url(/img/background2.jpg) no-repeat center center fixed;
     width: 100%;
-    height: 100vh;
     font-family: Inter;
+    overflow: hidden;
 }
 
 /* Navbar */
+.navbar {
+    /*background-color: #fb646b8d;  apenas pra ficar visivel de vez em quando */
+    padding-right: 15px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.menu {
+    gap: 20px;
+}
+
+.navbar,
 .menu {
     display: flex;
-    padding: 15px 25px;
-    justify-content: space-between;
-    align-items: center; 
+    flex-direction: row;
 }
 
-.item-menu {
-    margin-right: 15px;
-    font-size: 24px;
+.menu li {
+    font-size: 20px;
     list-style: none;
-    display: inline-block;
-    padding: 0 10px;
 }
 
-.item-menu:hover{
-    padding: 5px;
+.menu li:hover,
+.checkbtn:hover {
+    padding: 3px;
     background-color: rgba(255, 255, 255, 0.497);
     border-radius: 5px;
-    transition: 0.8s;
+    transition: 0.5s;
 }
 
-.item-menu a {
+.menu li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
@@ -42,6 +61,11 @@ body {
 .checkbtn {
     order: 6;
     display: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
 
 #check {
@@ -60,7 +84,7 @@ body {
 form div {
     justify-content: space-around;
     align-items: center;
-    padding: 10px;
+    padding: 6px;
 }
 
 form input {
@@ -71,6 +95,7 @@ form input {
     border-radius: 90px;
     background-color: rgba(255, 255, 255, 0.241);
     font-family: Inter;
+    transition: 0.3s;
 }
 
 form input:focus {
@@ -78,23 +103,161 @@ form input:focus {
     transition: 0.6s;
 }
 
-form input[type=button]{
+form input[type=button] {
     background-color: #FB646B;
     color: white;
     cursor: pointer;
     font-family: Inter;
-}
-form input[type=button]:hover{
-    background-color: #f83d46;
-    transition: 0.6s;
+    font-size: 16px;
+    width: 100%;
 }
 
-.input[type=text]{
+form input[type=button]:hover {
+    background-color: #f83d46;
+    transition: 0.1s;
+}
+
+.input[type=text] {
     font-size: 16px;
     font-family: FontAwesome, Inter;
 }
 
-.input[type=password]{
-    font-size:16px;
+.input[type=password] {
+    font-size: 16px;
     font-family: FontAwesome, Inter;
+}
+
+/* RODAPÉ */
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: #f83d46; */
+    height: auto;
+    width: 100vw;
+    color: white;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-menu{
+    display: flex;
+    flex: 1;
+}
+.footer-item{
+    list-style: none;
+    padding-left: 20px;
+}
+.footer-item a {
+    text-decoration: none;
+    color: white;
+}
+.copyright {
+    padding: 10px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 860px) {
+
+    #check:checked~.menu {
+        display: block;
+        transition-property: visibility, opacity;
+        transition-duration: 0s, 1s;
+    }
+
+    .navbar,
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu {
+        display: none;
+        text-align: center;
+        background-color: #FB646B;
+        width: 100vw;
+    }
+
+    .menu li {
+        padding: 10px;
+    }
+
+    .menu li:hover {
+        padding: 10px;
+        transition: 0.5s;
+    }
+
+    .navbar {
+        background-color: #FB646B;
+        align-items: flex-start;
+    }
+
+    .checkbtn {
+        display: flex;
+    }
+
+    form input {
+        min-width: 300px;
+        transition: 0.1s;
+    }
+}
+
+@media (min-width: 651px) and (max-width: 860px) {
+
+    .input {
+        align-items: center;
+        justify-content: center;
+    }
+
+    form input {
+        min-width: 300px;
+        transition: 0.1s;
+    }
+
+    .footer-item{
+        font-size: 15px;
+    }
+    .copyright{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 463px) and (max-width: 650px) {
+
+    .input {
+        align-items: center;
+        justify-content: center;
+    }
+
+    form input {
+        min-width: 200px;
+        transition: 0.1s;
+    }
+    .footer-item{
+        font-size: 10px;
+    }
+    .copyright{
+        font-size: 10px;
+    }
+}
+@media (max-width: 462px){
+    .input {
+        align-items: center;
+        justify-content: center;
+    }
+
+    form input {
+        min-width: 200px;
+        transition: 0.1s;
+    }
+    .footer-item{
+        font-size: 6px;
+    }
+    .copyright{
+        font-size: 6px;
+    }
 }

@@ -14,39 +14,48 @@
 
 <body>
     <!--Cabeçalho-->
-    <header>
-        <nav class="menu">
-            <!--LOGO-->
-            <label class="logo"><img src="/icons/logo.png" width="45" height="45" alt="Logo">
+    <nav class="navbar">
+        <!--LOGO-->
+        <label class="logo"><img src="/icons/logo.png" width="45" height="45" alt="Logo"></label>
 
-                <!--Check do Hamburguer-->
-            </label>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn"><i class="material-icons">menu</i></label>
+        <!--Check do Hamburguer-->
+        <input type="checkbox" id="check" unchecked>
+        <label for="check" class="checkbtn"><i class="material-icons">menu</i></label>
 
-            <!--Menu-->
-            <ul>
-                <li class="item-menu"><a href="#">Login</a></li>
-                <li class="item-menu"><a href="#">About Us</a></li>
-                <li class="item-menu"><a href="#">Register</a></li>
-                <li class="item-menu"><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <!--Menu-->
+        <ul class="menu">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
     <!--Corpo-->
-    <section>
-        <div class="main-container">
-            <form class="login-form">
+    <div class="main-container">
+        <form>
+            <div class="input"><input class="input" type="text" placeholder="&#xf007 &nbsp;&nbsp; User Name" required>
+            </div>
 
-                <div class="flex-input"><input class="input" type="text" placeholder="&#xf007 &nbsp;&nbsp; User Name" required></div>
+            <div class="input"><input class="input" type="password" placeholder="&#xf023 &nbsp;&nbsp; Password"
+                    required></div>
 
-                <div class="flex-input"><input class="input" type="password" placeholder="&#xf023 &nbsp;&nbsp; Password" required></div>
+            <div class="input"><input class="button" type="button" value="Get Started"></div>
+        </form>
+    </div>
 
-                <input class="button" type="button" value="Get Started">
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <ul class="footer-menu">
+                <li class="footer-item"><a href="#">About Us</a></li>
+                <li class="footer-item"><a href="#">Register</a></li>
+                <li class="footer-item"><a href="#">Contact</a></li>
+            </ul>
 
-            </form>
-        </div>
-    </section>
+            <span class="copyright">&copy;2021 Key. All Rights Reserved | Design By Rabia Israr</span>
+    </div>
+</footer>
 </body>
+
 </html>
