@@ -11,10 +11,13 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
-html, body {
+
+html,
+body {
     margin: 0;
     height: 100%;
 }
+
 body {
     width: 100%;
     font-family: Inter;
@@ -58,7 +61,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.logo{
+.logo {
     padding: 2px;
 }
 
@@ -91,7 +94,8 @@ form div {
     padding: 6px;
 }
 
-form input, form button {
+form input,
+form button {
     outline: unset;
     padding: 20px;
     min-width: 450px;
@@ -148,18 +152,22 @@ footer {
     justify-content: space-between;
     align-items: center;
 }
-.footer-menu{
+
+.footer-menu {
     display: flex;
     flex: 1;
 }
-.footer-item{
+
+.footer-item {
     list-style: none;
     padding-left: 10px;
 }
+
 .footer-item a {
     text-decoration: none;
     color: white;
 }
+
 .copyright {
     padding: 5px;
 }
@@ -167,7 +175,7 @@ footer {
 
 /* Bem Vindo */
 
-section{
+section {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,17 +188,18 @@ h1 {
     font-size: 24px;
 }
 
-section h1, section form {
+section h1,
+section form {
     min-width: 450px;
     font-family: Inter;
     transition: 0.3s;
 }
 
 .container {
-        justify-content: space-around;
-        align-items: center;
-        padding: 6px;
-    }
+    justify-content: space-around;
+    align-items: center;
+    padding: 6px;
+}
 
 .title {
     text-align: center;
@@ -252,7 +261,8 @@ section h1, section form {
         display: flex;
     }
 
-    form input, form button {
+    form input,
+    form button {
         max-width: 300px;
         transition: 0.1s;
     }
@@ -260,56 +270,51 @@ section h1, section form {
 
 @media (min-width: 651px) and (max-width: 860px) {
 
-    .input {
-        align-items: center;
-        justify-content: center;
-    }
-
-    form input, form button {
+    form input,
+    form button {
         min-width: 280px;
         transition: 0.1s;
     }
 
-    .footer-item{
+    .footer-item {
         font-size: 15px;
     }
-    .copyright{
+
+    .copyright {
         font-size: 15px;
     }
 }
 
 @media (min-width: 463px) and (max-width: 650px) {
 
-    .input {
-        align-items: center;
-        justify-content: center;
-    }
-
-    form input, form button {
+    form input,
+    form button {
         min-width: 250px;
         transition: 0.1s;
     }
-    .footer-item{
+
+    .footer-item {
         font-size: 10px;
     }
-    .copyright{
+
+    .copyright {
         font-size: 10px;
     }
 }
-@media (max-width: 462px){
-    .input {
-        align-items: center;
-        justify-content: center;
-    }
 
-    form input, form button{
+@media (max-width: 462px) {
+
+    form input,
+    form button {
         min-width: 180px;
         transition: 0.1s;
     }
-    .footer-item{
+
+    .footer-item {
         font-size: 6px;
     }
-    .copyright{
+
+    .copyright {
         font-size: 6px;
     }
 }
